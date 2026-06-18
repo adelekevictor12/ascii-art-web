@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii-Art-Web</title>
+    <style>
+        h1{
+            text-align: center;
+            color: darkgrey;
+            margin-bottom: 50px;
+        }
+        .form_div{
+            display: flex;
+            justify-content:space-around;
+            background-color: darkslategrey;
+            padding: 10px 0 10px 0;
+            
+        }
+        label{
+            color: white;
+        }
+        ul{
+            text-decoration: none;
+            list-style-type:none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <h1>ASCII ART WEB PAGE</h1>
+        </div>
+    </nav>
+    <main>
+        <div class="form_div">
+            <form method="post" action="/ascii-art">
+                <label for="input_box">Text input</label>
+                <br>
+                <input type="text" id="input_box" name="input_val" required placeholder="Enter your text here">
+                <br>
+                <select name="selector" >
+                    <option >standard</option>
+                    <option>shadow</option>
+                    <option>thinkertoy</option>
+                </select>
+                <button type="submit" name="btn_submit">submit</button>
+            </form>
+        </div>
+        <div>
+           <br>
+           <pre>{{.}}</pre>
+        </div>
+    </main>
+</body>
+</html>
